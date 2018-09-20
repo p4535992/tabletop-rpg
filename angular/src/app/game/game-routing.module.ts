@@ -5,8 +5,8 @@ import { CreateFolderComponent } from './create-folder/create-folder.component';
 
 const routes: Routes = [
   { path: "folder", component: CreateFolderComponent },
-  { path: "", redirectTo: "folder", pathMatch: "full" },
-  { path: "**", redirectTo: "folder", pathMatch: "full" },
+  { path: "", redirectTo: "folder", pathMatch: 'full'},
+  { path: '**', redirectTo: 'folder', pathMatch: 'full'}
 ];
 
 @NgModule({

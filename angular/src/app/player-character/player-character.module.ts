@@ -4,6 +4,7 @@ import { StoreModule } from '@ngrx/store';
 
 import { reducers, metaReducers } from './store/reducer';
 import { PlayerCharacterRoutingModule } from './player-character-routing.module';
+import { CreateCharacterComponent } from './create-character/create-character.component';
 
 @NgModule({
   imports: [
@@ -11,6 +12,6 @@ import { PlayerCharacterRoutingModule } from './player-character-routing.module'
     PlayerCharacterRoutingModule,
     StoreModule.forFeature("character", reducers, { metaReducers }),
   ],
-  declarations: []
+  declarations: [CreateCharacterComponent]
 })
 export class PlayerCharacterModule { }

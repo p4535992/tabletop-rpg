@@ -3,8 +3,9 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   { path: 'game', loadChildren: './game/game.module#GameModule'},
-  { path: '', redirectTo: 'game', pathMatch: 'full'},
-  { path: '**', redirectTo: 'game', pathMatch: 'full'},
+  { path: 'pc', loadChildren: './player-character/player-character.module#PlayerCharacterModule'},
+  { path: '', redirectTo: "game", pathMatch: "prefix"},
+  { path: '**', redirectTo: "game", pathMatch: "prefix"},
 ];
 
 @NgModule({
