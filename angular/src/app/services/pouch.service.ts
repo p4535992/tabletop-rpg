@@ -26,10 +26,6 @@ export class PouchService {
     this._db = val
   }
 
-  login(replicationSource: string, user: string, password: string): Observable<any> {
-    return from(new PouchDB(replicationSource).logIn(user, password));
-  }
-
   constructor() {
     const db_changes = this._db.sync(this._couch, {
       live: true,

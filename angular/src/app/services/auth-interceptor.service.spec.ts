@@ -1,12 +1,17 @@
 import { TestBed, inject } from '@angular/core/testing';
 
 import { AuthInterceptor } from './auth-interceptor.service';
-import { MatSnackBar } from '@angular/material';
+import { MatSnackBar, MatSnackBarModule } from '@angular/material';
 
 describe('AuthInterceptor', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [AuthInterceptor, MatSnackBar]
+      imports: [
+        MatSnackBarModule
+      ],
+      providers: [
+        AuthInterceptor,
+      ]
     });
   });
 
