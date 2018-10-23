@@ -1,4 +1,4 @@
-import { Component, OnInit, Inject } from '@angular/core';
+import { Component, OnInit, Inject, ChangeDetectionStrategy } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { Store } from '@ngrx/store';
 import { State } from '../store/pc.reducer';
@@ -9,7 +9,8 @@ import { Folder } from '../model';
 @Component({
   selector: 'rpg-edit-folder',
   templateUrl: './edit-folder.component.html',
-  styles: []
+  styles: [],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class EditFolderComponent implements OnInit {
 
