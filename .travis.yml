@@ -8,6 +8,8 @@ branches:
 matrix:
   include:
     - name: Angular
+      before_script:
+        - cd angular
       language: node_js
       node_js:
         - "8"
