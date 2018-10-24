@@ -18,7 +18,7 @@ describe('FolderListComponent', () => {
   let component: FolderListComponent;
   let fixture: ComponentFixture<FolderListComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(async () => {
     TestBed.configureTestingModule({
       imports: [
         ReactiveFormsModule,
@@ -34,12 +34,9 @@ describe('FolderListComponent', () => {
       ],
     })
       .compileComponents();
-  }));
 
-  beforeEach(() => {
     fixture = TestBed.createComponent(FolderListComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

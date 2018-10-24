@@ -23,8 +23,8 @@ matrix:
       install:
         - npm install
       script:
-        - npm run test -- --single-run --no-progress --browser=ChromeHeadlessCI
-        - npm run e2e -- --no-progress --config=protractor-ci.conf.js
+        - npm run test -- --watch=false --no-progress --browsers=ChromeHeadlessCI
+        - npm run e2e
     - name: Docker
       services:
         - docker

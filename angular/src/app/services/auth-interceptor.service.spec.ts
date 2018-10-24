@@ -4,7 +4,7 @@ import { AuthInterceptor } from './auth-interceptor.service';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material';
 
 describe('AuthInterceptor', () => {
-  beforeEach(() => {
+  beforeEach(async () => {
     TestBed.configureTestingModule({
       imports: [
         MatSnackBarModule

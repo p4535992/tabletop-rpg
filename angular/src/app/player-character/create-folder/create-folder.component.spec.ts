@@ -35,13 +35,11 @@ describe('CreateFolderComponent', () => {
       declarations: [ CreateFolderComponent ]
     })
     .compileComponents();
-  }));
 
-  beforeEach(() => {
     fixture = TestBed.createComponent(CreateFolderComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
-  });
+  }));
 
   it('should create', () => {
     expect(component).toBeTruthy();

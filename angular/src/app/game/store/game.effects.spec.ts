@@ -8,7 +8,7 @@ describe('GameEffects', () => {
   let actions$: Observable<any>;
   let effects: GameEffects;
 
-  beforeEach(() => {
+  beforeEach(async () => {
     TestBed.configureTestingModule({
       providers: [
         GameEffects,

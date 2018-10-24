@@ -3,7 +3,7 @@ import { GameModule } from './game.module';
 describe('GameModule', () => {
   let gameModule: GameModule;
 
-  beforeEach(() => {
+  beforeEach(async () => {
     gameModule = new GameModule();
   });
 

@@ -1,7 +1,7 @@
 <mat-accordion>
     <mat-expansion-panel #expand>
         <mat-expansion-panel-header>
-            <mat-panel-title *ngIf="(selectedFolder$ | async) as user;else wordFolder">{{user.name}}</mat-panel-title>
+            <mat-panel-title *ngIf="(selectedFolder$ | async) as folder;else wordFolder">{{folder.name}}</mat-panel-title>
             <ng-template #wordFolder>
                 <mat-panel-title>Folders</mat-panel-title>
             </ng-template>
