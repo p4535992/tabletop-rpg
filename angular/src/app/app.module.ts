@@ -4,20 +4,34 @@ import { MomentDateAdapter, MAT_MOMENT_DATE_FORMATS } from '@angular/material-mo
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {
-  MatSnackBarModule,
-  MatSnackBar,
-  DateAdapter,
-  MAT_DATE_LOCALE,
-  MAT_DATE_FORMATS,
-  MAT_SNACK_BAR_DEFAULT_OPTIONS,
-  MatDialog,
-  MatDialogModule,
-  MatInputModule,
-  MatIconModule,
-  MatCardModule,
-  MatButtonModule,
-} from '@angular/material';
+// import {
+//   MatSnackBarModule,
+//   MatSnackBar,
+//   DateAdapter,
+//   MAT_DATE_LOCALE,
+//   MAT_DATE_FORMATS,
+//   MAT_SNACK_BAR_DEFAULT_OPTIONS,
+//   MatDialog,
+//   MatDialogModule,
+//   MatInputModule,
+//   MatIconModule,
+//   MatCardModule,
+//   MatButtonModule,
+// } from '@angular/material';
+
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { DateAdapter } from '@angular/material/core';
+import { MAT_DATE_LOCALE } from '@angular/material/core';
+import { MAT_DATE_FORMATS  } from '@angular/material/core';
+import { MAT_SNACK_BAR_DEFAULT_OPTIONS  } from '@angular/material/snack-bar';
+import { MatDialog  } from '@angular/material/dialog';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatInputModule } from '@angular/material/input';
+import { MatIconModule } from '@angular/material/icon';
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
+
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { AuthInterceptor } from './services/auth-interceptor.service';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
@@ -55,6 +69,8 @@ import { EditFolderComponent } from './game/edit-folder/edit-folder.component';
     MatSnackBarModule,
     MatDialogModule,
     AppRoutingModule,
+    StoreModule.forRoot({}, {}),
+    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
   ],
   providers: [
     { provide: DateAdapter, useClass: MomentDateAdapter, deps: [MAT_DATE_LOCALE] },

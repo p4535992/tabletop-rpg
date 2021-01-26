@@ -6,7 +6,7 @@ import { Folder } from '../model';
 import { SaveFolder, LoadFolders, SelectFolder } from '../store/game.actions';
 import { ActivatedRoute } from '@angular/router';
 import { switchMapTo } from 'rxjs/operators';
-import { MatDialogRef } from '@angular/material';
+import { MatDialogRef } from '@angular/material/dialog';
 
 @Component({
   selector: 'rpg-create-folder',

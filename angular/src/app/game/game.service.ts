@@ -17,7 +17,8 @@ export class GameService {
     private _pouchService: PouchService
   ) { }
 
-  getFolders(): Observable<DbQuery<Folder>> {
+  //getFolders(): Observable<DbQuery<Folder>> {
+  getFolders(): Observable<any> {
     return from(
       this._pouchService.db.allDocs(
         {
@@ -26,10 +27,12 @@ export class GameService {
           startkey: 'folder_\ufff0',
           endkey: 'folder_',
           descending: true,
-        }));
+        })
+    );
   }
 
-  saveFolder(folder: Folder): Observable<DbPutResponse> {
+  //saveFolder(folder: Folder): Observable<DbPutResponse> {
+  saveFolder(folder: Folder): Observable<any> {
     return from(this._pouchService.db.put(folder));
   }
 
@@ -37,7 +40,8 @@ export class GameService {
     return from(this._pouchService.db.remove(folder));
   }
 
-  updateFolder(folder: Folder): Observable<DbPutResponse> {
+  //updateFolder(folder: Folder): Observable<DbPutResponse> {
+  updateFolder(folder: Folder): Observable<any> {
     return from(this._pouchService.db.put(folder));
   }
 }
